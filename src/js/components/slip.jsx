@@ -29,7 +29,7 @@ export default function Slip(props) {
           ))}
         </ul>
       </div>
-      <button className="btn btn-success">Print</button>
+      <button className="btn btn-success mt-3">Print</button>
     </div>
   );
 }

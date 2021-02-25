@@ -6,8 +6,9 @@ import Slip from "./components/slip.jsx";
 import "../sass/style.scss";
 
 function App() {
+  const rt = localStorage.getItem("rt");
   const [transaction, setTransaction] = useState([]);
-  const [label, setLabel] = useState("Reciept Title");
+  const [label, setLabel] = useState(rt ? rt : "Reciept Title");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,6 +26,7 @@ function App() {
   }
 
   function setTitle(e) {
+    localStorage.setItem("rt", e.target.value);
     setLabel(() => e.target.value);
   }
 
